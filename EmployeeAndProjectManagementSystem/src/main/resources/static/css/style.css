@@ -1,0 +1,110 @@
+/* --- Global Reset & Typography --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light, soft background */
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+    padding: 20px 0;
+    margin: 0 0 10px 20px;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* --- Navigation Styling --- */
+.main-nav {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main-nav li {
+    margin-right: 30px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #555;
+    padding: 15px 0;
+    display: block;
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.main-nav a:hover {
+    color: #007bff; /* Primary brand color on hover */
+}
+
+.main-nav a.active {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+}
+
+.main-nav .auth-link {
+    margin-left: auto; /* Pushes the Login link to the right */
+}
+
+/* --- Main Content Area Styling --- */
+#app-content {
+    padding: 20px 40px;
+    min-height: 80vh;
+}
+
+/* --- Reusable Components (from Employees Design) --- */
+.add-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s;
+    margin-right: 15px;
+}
+
+.add-button:hover {
+    background-color: #1e7e34;
+}
+
+.status-badge {
+    /* Base styles are included in the Proposal/Leave page styles */
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: white;
+    display: inline-block;
+}
+
+/* Status Colors (for Proposals/Leave) */
+.status-draft { background-color: #6c757d; }
+.status-pending { background-color: #ffc107; color: #333; }
+.status-approved { background-color: #28a745; }
+.status-rejected { background-color: #dc3545; }
+
+/* Placeholder for the Employees list table, which was in the previous answer */
+.employee-list { 
+    /* ... Employee table styles go here ... */
+}

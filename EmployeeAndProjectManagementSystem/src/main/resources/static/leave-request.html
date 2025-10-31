@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Requests - Employee Portal Management System</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+    <style>
+        /* LEAVE REQUESTS SPECIFIC STYLES */
+        .leave-layout {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .submission-form, .history-panel {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .submission-form input[type="date"],
+        .submission-form select,
+        .submission-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        .submission-form textarea {
+            resize: vertical;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.2s;
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* History Panel */
+        .history-panel h3 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: #333;
+        }
+
+        .request-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f5f5f5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .request-item:last-child {
+            border-bottom: none;
+        }
+
+        .request-dates {
+            font-weight: 600;
+        }
+        
+        /* Reusing status badges from Proposals page for consistency */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Employee Portal Management System</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a href="/employees.html">Employees</a></li>
+                <li><a href="/proposals.html">Proposals</a></li>
+                <li><a href="/leave-request.html" class="active">Leave Requests</a></li>
+                <li class="auth-link"><a href="/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="app-content">
+        <h2>⛱ Leave Request Portal</h2>
+        
+        <div class="leave-layout">
+            
+            <div class="submission-form">
+                <h3>Submit New Request</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="type">Leave Type</label>
+                        <select id="type" name="leaveType" required>
+                            <option value="annual">Annual Leave</option>
+                            <option value="sick">Sick Leave</option>
+                            <option value="paternity">Paternity/Maternity Leave</option>
+                            <option value="unpaid">Unpaid Leave</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="start-date">Start Date</label>
+                        <input type="date" id="start-date" name="startDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="end-date">End Date</label>
+                        <input type="date" id="end-date" name="endDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Reason (Optional)</label>
+                        <textarea id="reason" name="reason" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Submit Request</button>
+                </form>
+            </div>
+            
+            <div class="history-panel">
+                <h3>My Request History</h3>
+                <div class="request-item">
+                    <div class="request-dates">2025-09-01 to 2025-09-05</div>
+                    <span class="status-badge status-approved">Approved</span>
+                </div>
+                <div class="request-item">
+                    <div class="request-dates">2025-11-10 to 2025-11-10</div>
+                    <span class="status-badge status-pending">Pending</span>
+                </div>
+                <div class="request-item">
+                    <div class="request-dates">2025-07-15 to 2025-07-17</div>
+                    <span class="status-badge status-rejected">Rejected</span>
+                </div>
+                </div>
+            
+        </div>
+    </main>
+</body>
+</html>

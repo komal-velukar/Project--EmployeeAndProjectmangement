@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPMS Portal - Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+    <style>
+        /* DASHBOARD SPECIFIC STYLES (Add your dashboard CSS here or include in style.css) */
+        /* ... styles from previous answers ... */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .metric-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid; 
+        }
+        .metric-card h3 { font-size: 1em; color: #777; margin: 0 0 10px 0; }
+        .metric-card .value { font-size: 2.5em; font-weight: 700; color: #333; }
+        .metric-employees { border-left-color: #007bff; }
+        /* ... rest of your dashboard styles ... */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Employee Portal Management System</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/" class="active">Dashboard</a></li> 
+                <li><a href="/employees">Employees</a></li>
+                <li><a href="/proposals">Proposals</a></li>
+                <li><a href="/leave-request">Leave Requests</a></li>
+                <li class="auth-link"><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="app-content">
+        <h2>📊 Overview Dashboard</h2>
+        <div class="dashboard-grid">
+            <div class="metric-card metric-employees">
+                <h3>Total Employees</h3>
+                <div class="value">145</div>
+            </div>
+            </div>
+    </main>
+</body>
+</html>

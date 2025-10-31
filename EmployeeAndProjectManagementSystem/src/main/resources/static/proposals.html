@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposals - Employee Portal Management System</title>
+    <link rel="stylesheet" href="/css/style.css"> 
+    <style>
+        /* PROPOSALS SPECIFIC STYLES */
+        .controls-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .proposal-list {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .proposal-list th, .proposal-list td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .proposal-list th {
+            background-color: #f8f9fa;
+            color: #555;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9em;
+        }
+
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+            color: white;
+            display: inline-block;
+        }
+
+        .status-draft { background-color: #6c757d; }
+        .status-pending { background-color: #ffc107; color: #333; }
+        .status-approved { background-color: #28a745; }
+        .status-rejected { background-color: #dc3545; }
+
+        .proposal-list tr:hover {
+            background-color: #f0f8ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Employee Portal Management System</h1>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="/dashboard.html">Dashboard</a></li>
+                <li><a href="/employees.html">Employees</a></li>
+                <li><a href="/proposals.html" class="active">Proposals</a></li>
+                <li><a href="/leave-request.html">Leave Requests</a></li>
+                <li class="auth-link"><a href="/login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="app-content">
+        <h2>📝 Proposals Tracking</h2>
+        
+        <div class="controls-bar">
+            <a href="#" class="add-button" style="background-color: #007bff;">+ Submit New Proposal</a>
+            <input type="search" placeholder="Search proposals...">
+        </div>
+
+        <table class="proposal-list">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Submitted By</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Project Titan Infrastructure Upgrade</td>
+                    <td>Jane Doe</td>
+                    <td>2025-10-15</td>
+                    <td><span class="status-badge status-approved">Approved</span></td>
+                    <td><a href="#">View</a></td>
+                </tr>
+                <tr>
+                    <td>New Employee Onboarding Process</td>
+                    <td>John Smith</td>
+                    <td>2025-10-22</td>
+                    <td><span class="status-badge status-pending">Pending</span></td>
+                    <td><a href="#">Review</a></td>
+                </tr>
+                <tr>
+                    <td>Q4 Marketing Campaign Budget</td>
+                    <td>Sarah Lee</td>
+                    <td>2025-10-01</td>
+                    <td><span class="status-badge status-rejected">Rejected</span></td>
+                    <td><a href="#">Details</a></td>
+                </tr>
+                <tr>
+                    <td>Internal Training Platform Idea</td>
+                    <td>Self (Draft)</td>
+                    <td>2025-10-25</td>
+                    <td><span class="status-badge status-draft">Draft</span></td>
+                    <td><a href="#">Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

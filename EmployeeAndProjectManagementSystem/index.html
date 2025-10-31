@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPMS Portal - Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Employee Portal Management System</h1>
+        <nav id="main-nav">
+            <a href="#dashboard">Dashboard</a> 
+            <a href="#employees">Employees</a> 
+            <a href="#proposals">Proposals</a> 
+            <a href="#leave">Leave Requests</a>
+            <a href="#login" id="auth-link">Login</a>
+        </nav>
+        <div id="auth-info"></div>
+    </header>
+
+    <main id="app-content">
+        <p>Loading application content...</p>
+    </main>
+
+    <script src="/js/api-service.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
